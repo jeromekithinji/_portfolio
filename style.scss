@@ -4,19 +4,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-
+    // font-family: 'Roboto', sans-serif;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+// NAVIGATION BAR
 .nav {
+    width: 20%;
+    height: 100vh;
     background-color: $primary-color;
     color: $text-color;
-    width: 17%;
-    left: 0;
-    max-height: 100vh;
-    min-height: 100vh;
     position: fixed;
-
 
     h2 {
         margin-top: 20px;
@@ -33,7 +35,7 @@
     li {
         padding: 40px 0 40px 0;
     }
-
+        
 }
 
 .nav__link {
@@ -53,47 +55,32 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .verticalLine {
-    border-left: 3px solid $text-color;
-    max-height: 100vh;
-    min-height: 100vh;    
+    border-left: 2px solid $text-color;
+    margin-left: 20%;
+    height: 100vh;
     position: fixed;
-    left: 17%;
-    // margin-left: -3px;
     top: 0;
 }
 
-// .image {
-//     width: 85%;
-//     height: 100%;
-//     // max-height: 100vh;
-//     min-height: 100vh;
-// }
+// LANDING PAGE
 
 .image {
-    display: grid;
+
     height: 100vh;
-    // position: relative;
-    // text-align: center;
-    // color: white;
 }
 
 .image__file {
     width: 100%;
-    max-width: 100%;
-    max-height: 100vh;
+    height: 100vh;
     margin: auto;
 }
 
-// .image__text {
-//     color: $text-color;
-//     position: absolute;
-//     top: 20px;
-//     left: 20%;
-// }
+.image__text {
+    color: $text-color;
+}
 
 .image__text {
     color: $text-color;
@@ -104,18 +91,129 @@
     font-size: 50px;
 }
 
+// ABOUT ME PAGE
+
+section {
+    margin-left: 21%;
+    width: 80%;
+    height: 100vh;
+}
+
+
+
+//WORKS
+
+// .nav {
+//     background-color: $primary-color;
+//     color: $text-color;
+//     width: 17%;
+//     left: 0;
+//     max-height: 100vh;
+//     min-height: 100vh;
+//     position: fixed;
+
+
+//     h2 {
+//         margin-top: 20px;
+//     }
+//     h2, h4 {
+//         margin-left: 40px;
+//         margin-bottom: 10px;
+//     }
+
+//     ul {
+//         list-style-type: none;
+//     }
+
+//     li {
+//         padding: 40px 0 40px 0;
+//     }
+
+// }
+
+// .nav__link {
+//     color: $text-color;
+//     text-decoration: none;
+//     margin: 20px;
+//     padding: 20px;
+// }
+
+// .nav__socialLink {
+//     color: $text-color;
+//     font-size:48px;
+//     padding: 20px;
+// }
+
+// .nav__socialsLinks li{
+//     display: inline-flex;
+//     justify-content: center;
+//     align-items: center;
+
+// }
+
+// .verticalLine {
+//     border-left: 3px solid $text-color;
+//     max-height: 100vh;
+//     min-height: 100vh;    
+//     position: fixed;
+//     left: 17%;
+//     // margin-left: -3px;
+//     top: 0;
+// }
+
+// // .image {
+// //     width: 85%;
+// //     height: 100%;
+// //     // max-height: 100vh;
+// //     min-height: 100vh;
+// // }
+
+// .image {
+//     display: grid;
+//     height: 100vh;
+//     // position: relative;
+//     // text-align: center;
+//     // color: white;
+// }
+
+// .image__file {
+//     width: 100%;
+//     max-width: 100%;
+//     max-height: 100vh;
+//     margin: auto;
+// }
+
+// // .image__text {
+// //     color: $text-color;
+// //     position: absolute;
+// //     top: 20px;
+// //     left: 20%;
+// // }
+
+// .image__text {
+//     color: $text-color;
+//     position: absolute;
+//     top: 50%;
+//     left: 58.5%;
+//     transform: translate(-50%, -50%);
+//     font-size: 50px;
+// }
+
 // .page_header {
-//     color: green;
-//     text-transform: uppercase;
+//     color: $primary-color;
 //     background-color: $secondary-color;
+//     padding: 10px 0 10px 275px;
+//     font-size: 40px;
+//     font-style: normal;
+//     font-weight:320;
 // }
 
 
 
-.home {
-    color: $primary-color;
-}
+// .home {
+//     color: $primary-color;
+// }
 
-section {
-    min-height: 100vh;
-}
+// section {
+//     min-height: 100vh;
+// }
