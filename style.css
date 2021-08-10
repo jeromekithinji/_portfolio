@@ -15,6 +15,7 @@ body {
   background-color: #005086;
   color: #F2F5F7;
   position: fixed;
+  border-right: 2px solid #F2F5F7;
 }
 .nav h2 {
   margin-top: 20px;
@@ -28,6 +29,11 @@ body {
 }
 .nav li {
   padding: 40px 0 40px 0;
+}
+
+.nav__header {
+  padding-bottom: 10px;
+  border-bottom: 3px solid #F2F5F7;
 }
 
 .nav__link {
@@ -49,15 +55,23 @@ body {
   align-items: center;
 }
 
-.verticalLine {
-  border-left: 2px solid #F2F5F7;
+section {
   margin-left: 20%;
+  width: 80%;
   height: 100vh;
-  position: fixed;
-  top: 0;
+}
+
+.page_header {
+  color: #005086;
+  background-color: #AFC1D0;
+  padding: 10px 0 10px 10px;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 320;
 }
 
 .image {
+  position: relative;
   height: 100vh;
 }
 
@@ -80,8 +94,48 @@ body {
   font-size: 50px;
 }
 
-section {
-  margin-left: 21%;
-  width: 80%;
-  height: 100vh;
+@media screen and (max-width: 781px) {
+  body {
+    flex-direction: column;
+  }
+
+  .nav {
+    width: 100vw;
+    height: 25vh;
+  }
+
+  main {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  section {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    flex-direction: column;
+  }
+
+  .nav {
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  main {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  section {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
 }
