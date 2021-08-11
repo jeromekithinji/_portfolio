@@ -15,16 +15,16 @@
 <body>
     <nav class="nav">
         <div class="nav__header">
-            <h2 class="nav__title">Jerome Kithinji</h2>
+            <h2 class="nav__title"><a href="#landing__section">Jerome Kithinji</a></h2>
             <h4 class="nav__subheader">Software Developer</h4>
         </div>
         <!-- <h2 class="nav__header">Jerome Kithinji</h2>
         <h4 class="nav__subheader">Junior Software Developer</h4> -->
         <!-- <hr size=3> -->
         <ul>
-            <li><a class="nav__link" href="#home"><i class="fas fa-user-astronaut"></i>About Me</a></li>
-            <li><a class="nav__link" href="#news">Portfolio</a></li>
-            <li><a class="nav__link" href="#contact"><i class="far fa-chart-bar"></i>Skills</a></li>
+            <li><a class="nav__link" href="#about__section"><i class="fas fa-user-astronaut"></i>About Me</a></li>
+            <li><a class="nav__link" href="#portfolio__section">Portfolio</a></li>
+            <li><a class="nav__link" href="#skills__section"><i class="far fa-chart-bar"></i>Skills</a></li>
             <li><a class="nav__link" href="#about"><i class="fas fa-envelope"></i>Contact</a></li>
             <li><a class="nav__link" href="#about"><i class="fas fa-file-alt"></i>Resume</a></li>
         </ul>
@@ -37,21 +37,21 @@
     </nav>
     <main class="main">
         <!-- <div class="verticalLine"></div> -->
-        <section class="landing__section">
+        <section class="landing__section" id="landing__section">
             <div class="image">
                 <img class="image__file" src="assets/images/home_picture.jpg" alt="Landscape picture of the alps">
                 <div class="image__text">Welcome.</div>
             </div>
         </section>
 
-        <section class="about__section">
+        <section class="about__section" id="about__section">
             <h1 class="page__header">ABOUT ME</h1>
             <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec felis congue, fermentum elit et, molestie urna. Pellentesque non ante erat. Phasellus odio sem, finibus ut pulvinar quis, iaculis ac nisl. Fusce ex ante, accumsan sed eros ac, iaculis rutrum odio. In varius facilisis euismod. Ut tristique mattis auctor. Curabitur dapibus molestie sagittis.</p>
         </section>
         
-        <section class="portfolio__section">
+        <section class="portfolio__section" id="portfolio__section">
             <h1 class="page__header">PORTFOLIO</h1>
-            <div class="porfolio__container">
+            <div class="portfolio__container">
                 <!-- CARD 1 -->
                 <div class="portfolio__card">
                     <input type="checkbox" id="card1" class="details" aria-hidden="true">
@@ -94,8 +94,55 @@
                         </div>
                     </div>
                 </div>
+                <!-- CARD 2 -->
+                <div class="portfolio__card">
+                    <input type="checkbox" id="card2" class="details" aria-hidden="true">
+                    <div class="card__content">
+                        <div class="card__front">
+                            <div class="card__inner">
+                                <h2>Real-estate Website</h2>
+                                <div class="tech_Stack">
+                                    <i class="fab fa-css3"></i>                            
+                                    <i class="fab fa-html5"></i>                           
+                                </div>
+                                <label for="card2" class="button" aria-hidden="true">
+                                    Details
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="card__inner">
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                        ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                        tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                </div>
+                                <label for="card2" class="button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <section class="skills_section">
+            <h1 class="page__header">skills</h1>
+        </section>
+        
     </main>
 
     <!-- <section class="skills__section">

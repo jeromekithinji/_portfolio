@@ -41,6 +41,12 @@ body {
     }
         
 }
+
+.nav__title a {
+    text-decoration: none;
+    color: $text-color;
+}
+
 .nav__header {
     padding-bottom: 10px;
     border-bottom: 3px solid $text-color;
@@ -85,6 +91,7 @@ section {
 .page__header {
     color: $primary-color;
     background-color: $secondary-color;
+    text-transform: uppercase;
     padding: 10px 0 10px 10px;
     margin-bottom: 30px;
     font-size: 40px;
@@ -145,13 +152,9 @@ section {
 // }
 
 .portfolio__container {
-    margin-top: 100px;
-    display: flex;
-    // flex-wrap: wrap;
-    // flex-flow: row wrap;
-    // align-items: center;
-    // justify-content: space-between;
-    // top: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 }
 
 
@@ -159,7 +162,7 @@ section {
 	width: 400px;
 	height: 400px;
 	margin: 1rem 1rem 1rem 1rem;
-	// perspective: 1500px;
+	perspective: 1500px;
 	.card__content {
 		position: relative;
 		width: 100%;
@@ -196,7 +199,6 @@ section {
 }
 
 .card__front {
-    background-image: url('/Users/jeromekithinji/Development/Portfolio/assets/images/home_picture.jpg');
 	background-color: #fff;
 	background-size: cover;
 	background-position: center center;
@@ -212,7 +214,7 @@ section {
 		backface-visibility: hidden;
 		background: linear-gradient(
 			40deg,
-			rgba(67, 138, 243, 0.7),
+			$primary-color,
 			rgba(255, 242, 166, 0.7)
 		);
 	}
@@ -224,7 +226,7 @@ section {
 
 	h2 {
 		grid-row: 2;
-		margin-bottom: 0.3em;
+		margin-bottom: 0.3rem;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 		color: #fff;
@@ -251,7 +253,7 @@ section {
 	.card__inner {
 		grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
 		grid-template-columns: repeat(4, auto);
-		grid-column-gap: 0.8em;
+		grid-column-gap: 0.8rem;
 		justify-items: center;
 	}
 
@@ -301,10 +303,10 @@ section {
 	font-weight: 600;
 	cursor: pointer;
 	display: block;
-	padding: 0 1.5em;
+	padding: 0 1.5rem;
 	height: 3em;
-	line-height: 2.9em;
-	min-width: 3em;
+	line-height: 2.9rem;
+	min-width: 3rem;
 	background-color: transparent;
 	border: solid 2px #fff;
 	color: #fff;
@@ -323,7 +325,7 @@ section {
 	}
 
 	&.return {
-		line-height: 3em;
+		line-height: 3rem;
 		color: $primary-color;
 		border-color: $primary-color;
 		text-shadow: none;
@@ -387,6 +389,7 @@ section {
     text-align: center;
     width: 100vw;
     height: 100vh;
+    top:0;
     // height: 25vh;
     }
 
