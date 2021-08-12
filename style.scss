@@ -85,7 +85,7 @@ body {
 section {
     margin-left: 20%;
     width: 80%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .page__header {
@@ -155,6 +155,7 @@ section {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
+    min-height: 100vh;
 }
 
 
@@ -353,9 +354,19 @@ section {
 
 // SKILLS SECTION
 
+.skills__header {
+    color: $primary-color;
+    text-transform: uppercase;
+    padding: 10px 0 10px 10px;
+    // margin-bottom: 30px;
+    font-size: 30px;
+    // font-style: normal;
+    font-weight: 400;
+}
+
 .skills__container {
     margin: 15px;
-    background-color: green;
+    // background-color: green;
     padding: 0 5px 0 5px;
 }
 
@@ -364,6 +375,7 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .column {
@@ -379,23 +391,84 @@ section {
     font-size: 6rem;
     background-color: green;
     text-align: center;
+    margin: 0 5px 0 5px;
     // paddi
 }
 
+// Contact section
 
+.contact__container {
+    margin: 15px;
+    // background-color: green;
+    padding: 0 5px 0 5px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    // height: 100vh;
+    // flex-basis: 50vw;
+    flex: 1;
+}
+
+.contact_part {
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 4fr);
+    grid-template-rows: repeat(1, 50px);
+    grid-template-areas:
+    "icon link";
+    gap: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.contact_icon {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 3rem;
+    background-color: green;
+    text-align: center;
+    grid-area: icon;
+    // margin: 0 5px 0 5px;
+}
+
+.contact_link {
+    color: red;
+    font-size: 2rem;
+    background-color:blue;
+    width: 100%;
+    text-align:left;
+    margin: 0 5px 0 5px;
+    grid-area: link;
+}
 
 
 
 //RESPONSIVENESS
 
 @media screen and (max-width: 781px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        // font-family: 'Roboto', sans-serif;
+    }
+
     body {
         flex-direction: column;
     }
 
     .nav {
         width: 100vw;
-        height: 25vh;
+        height: 100vh;
     }
 
     main {
@@ -406,11 +479,18 @@ section {
     section {
         margin: 0;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
     }
 }
 
 @media screen and (max-width: 500px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        // font-family: 'Roboto', sans-serif;
+    }
+    
     body {
         flex-direction: column;
     }
@@ -433,12 +513,50 @@ section {
     section {
         margin: 0;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
+    }
+
+    .portfolio__container {
+        min-height: 100vh;
+        width: 100vw;
+        // display: none;
+    }
+
+    .contact_part {
+        background-color: cornflowerblue;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 50px;
+        grid-template-areas:
+        "icon link";
+        gap: 10px;
+        padding: 5px;
+        margin: 10px;
+        max-width: 100vw;
+    }
+    
+    // .contact_icon {
+    //     color: rgba(255, 255, 255, 0.8);
+    //     // font-size: 3rem;
+    //     background-color: green;
+    //     text-align: center;
+    //     grid-area: icon;
+    //     // margin: 0 5px 0 5px;
+    // }
+
+    .contact_link {
+        color: orange;
+        font-size: 1rem;
+        background-color:blue;
+        max-width: 100vw;
+        text-align:left;
+        margin: 0 5px 0 5px;
+        grid-area: link;
     }
 
     .column {
-        flex: 2
-      }
+        flex: 1
+    }
 
 }
 
