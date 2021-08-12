@@ -278,20 +278,30 @@ section {
   box-shadow: none;
 }
 
-::-webkit-scrollbar {
-  width: 5px;
+.skills__container {
+  margin: 15px;
+  background-color: green;
+  padding: 0 5px 0 5px;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #008dec;
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #005086;
+.tech_stack_icon {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 6rem;
+  background-color: green;
+  text-align: center;
 }
 
 @media screen and (max-width: 781px) {
@@ -338,5 +348,9 @@ section {
     margin: 0;
     width: 100vw;
     height: 100vh;
+  }
+
+  .column {
+    flex: 2;
   }
 }
