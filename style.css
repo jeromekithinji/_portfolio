@@ -376,6 +376,7 @@ section {
   .nav {
     width: 100vw;
     height: 100vh;
+    position: relative;
   }
 
   main {
@@ -405,7 +406,6 @@ section {
     text-align: center;
     width: 100vw;
     height: 100vh;
-    top: 0;
   }
 
   main {
