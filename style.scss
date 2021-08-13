@@ -19,7 +19,8 @@ body {
     background-color: $primary-color;
     color: $text-color;
     position: fixed;
-    border-right: 2px solid $text-color;;
+    border-right: 2px solid $text-color;
+    // box-shadow: 0 10px 10px 10px $text-color;
     // overflow: auto;
 
 
@@ -36,13 +37,33 @@ body {
     }
 
     li {
-        padding: 40px 0 40px 0;
+        // padding: 40px 0 40px 0;
+        margin: 40px 0 40px 0;
     }
         
 }
+
+.nav__title a {
+    text-decoration: none;
+    color: $text-color;
+}
+
 .nav__header {
-    padding-bottom: 10px;
+    padding-bottom: 4px;
     border-bottom: 3px solid $text-color;
+    margin-bottom: 30px;
+}
+
+.nav__icon {
+    font-size: 30px;
+    padding-right: 15px;
+}
+
+.nav__link:hover {
+    border-top: 0.5px solid $text-color;
+    border-bottom: 0.5px solid $text-color;
+    cursor: url(assets/images/rocket_icon.png)15, 15, pointer;
+    // padding-left: 10px;
 }
 
 .nav__link {
@@ -50,40 +71,36 @@ body {
     text-decoration: none;
     margin: 20px;
     padding: 20px;
+    font-size: medium;
 }
 
 .nav__socialLink {
     color: $text-color;
-    font-size:48px;
+    font-size: 30px;
     padding: 20px;
 }
 
-.nav__socialsLinks li{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+.nav__socialsLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    // align-items: center;
 }
-
-// .verticalLine {
-//     border-left: 2px solid $text-color;
-//     margin-left: 20%;
-//     height: 100vh;
-//     position: fixed;
-//     top: 0;
-// }
 
 // SECTIONS
 
 section {
     margin-left: 20%;
     width: 80%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.page_header {
+.page__header {
     color: $primary-color;
     background-color: $secondary-color;
+    text-transform: uppercase;
     padding: 10px 0 10px 10px;
+    margin-bottom: 30px;
     font-size: 40px;
     font-style: normal;
     font-weight:320;
@@ -106,27 +123,399 @@ section {
     color: $text-color;
 }
 
-.image__text {
+.image__text p{
     color: $text-color;
     position: absolute;
     top: 50%;
-    left: 58.5%;
+    left: 50.5%;
     transform: translate(-50%, -50%);
     font-size: 50px;
 }
 
+/* Animation */
+// .image__text p{
+//     animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+// }
+
+// @keyframes typewriter{
+//     from{width: 0;}
+//     to{width: 24em;}
+// }
+
+// @keyframes blinkTextCursor{
+//     from{border-right-color: rgba(255,255,255,.75);}
+//     to{border-right-color: transparent;}
+// }
+
 // ABOUT ME PAGE
 
+.about__text {
+    margin: 0 15px 0 15px;
+    padding-left: 15px;
+    font-size: 25px;
+    font-weight:320;
+    border-left: 4px solid $primary-color;
+}
 
+// PORTFOLIO
+
+.portfolio__container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+    min-height: 100vh;
+}
+
+
+.portfolio__card {
+	width: 400px;
+	height: 400px;
+	margin: 1rem 1rem 1rem 1rem;
+	perspective: 1500px;
+	.card__content {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		transform-style: preserve-3d;
+		transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+	}
+}
+
+.details {
+	display: none;
+
+	&:checked ~ .card__content {
+		transform: rotateY(180deg);
+	}
+}
+
+.card__front, .card__back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	border-radius: 6px;
+
+	.card__inner {
+		height: 100%;
+		display: grid;
+		padding: 1.5em;
+		transform: translateZ(80px) scale(0.94);
+	}
+}
+
+.card__front {
+	background-color: #fff;
+	background-size: cover;
+	background-position: center center;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		border-radius: 6px;
+		backface-visibility: hidden;
+		background: linear-gradient(
+			40deg,
+			$primary-color,
+			rgba(255, 242, 166, 0.7)
+		);
+	}
+
+	.card__inner {
+		grid-template-rows: 5fr 1fr 1fr 2fr 1fr;
+		justify-items: center;
+	}
+
+	h2 {
+		grid-row: 2;
+		margin-bottom: 0.3rem;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		color: #fff;
+		font-weight: 500;
+		text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.tech_Stack {
+		grid-row: 3;
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 2.5rem;
+		display: flex;
+		flex-flow: row nowrap;
+		i {
+			margin: 0 7px;
+		}
+	}
+}
+
+.card__back {
+	transform: rotateY(180deg);
+	background-color: #fff;
+	border: 2px solid rgb(240, 240, 240);
+	.card__inner {
+		grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
+		grid-template-columns: repeat(4, auto);
+		grid-column-gap: 0.8rem;
+		justify-items: center;
+	}
+
+	.project_Link {
+		display: flex;
+		color: $primary-color;
+		grid-row: 1;
+        
+		i {
+			&:before {
+				background: linear-gradient(40deg, $primary-color, rgb(67, 138, 243));
+
+				-webkit-text-fill-color: transparent;
+				-webkit-background-clip: text;
+			}
+			font-size: 2.5rem;
+		}
+		.icon {
+            display: flex;
+            margin-left: 90px;
+        }
+	}
+
+	.project_Description {
+		grid-row-start: 3;
+        grid-row-end: 7;
+		grid-column: 1/-1;
+		font-size: 0.86em;
+		border-radius: 5px;
+		font-weight: 600;
+		line-height: 1.4em;
+		overflow: auto;
+		color: $primary-color;
+		padding-right: 10px;
+	}
+
+	.button {
+		grid-column: 1/-1;
+		justify-self: center;
+	}
+}
+
+.button {
+	grid-row: -1;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+	cursor: pointer;
+	display: block;
+	padding: 0 1.5rem;
+	height: 3em;
+	line-height: 2.9rem;
+	min-width: 3rem;
+	background-color: transparent;
+	border: solid 2px #fff;
+	color: #fff;
+	border-radius: 4px;
+	text-align: center;
+	left: 50%;
+	backface-visibility: hidden;
+	transition: 0.3s ease-in-out;
+	text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+
+	&:hover {
+		background-color: #fff;
+		box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+		text-shadow: none;
+		color: $primary-color;
+	}
+
+	&.return {
+		line-height: 3rem;
+		color: $primary-color;
+		border-color: $primary-color;
+		text-shadow: none;
+		&:hover {
+			background-color: $primary-color;
+			color: #fff;
+			box-shadow: none;
+		}
+	}
+}
+
+// Scroll bar in project description
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+	background: lighten($primary-color, 20%);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: $primary-color;
+}
+
+// SKILLS SECTION
+
+.skills__header {
+    color: $primary-color;
+    text-transform: uppercase;
+    padding: 10px 0 10px 10px;
+    // margin-bottom: 30px;
+    font-size: 30px;
+    // font-style: normal;
+    font-weight: 400;
+}
+.skills__section h2 {
+    // border-bottom: 2px solid $secondary-color;
+    text-decoration: underline;
+
+}
+
+.skills__container {
+    margin: 15px;
+    // background-color: green;
+    padding: 0 5px 0 5px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    // height: 100vh;
+    // flex-basis: 50vw;
+    flex: 1;
+}
+
+.tech_stack_icon {
+    color: $primary-color;
+    font-size: 6rem;
+    // background-color: green;
+    text-align: center;
+    margin: 0 5px 0 5px;
+    padding-bottom: 30px;
+    // paddi
+}
+
+// Contact section
+
+.contact__container {
+    margin: 15px;
+    // background-color: green;
+    padding: 0 5px 0 5px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    // height: 100vh;
+    // flex-basis: 50vw;
+    flex: 1;
+}
+
+.contact_part {
+    // background-color: #F7FDFF;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 4fr);
+    grid-template-rows: repeat(1, 50px);
+    grid-template-areas:
+    "icon link";
+    // gap: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.contact_icon {
+    color: $primary-color;
+    font-size: 4rem;
+    // background-color: green;
+    text-align: center;
+    grid-area: icon;
+    margin-right: 50px;
+    // margin: 0 5px 0 5px;
+}
+
+.contact_link {
+    color: $primary-color;
+    font-size: 2rem;
+    // background-color:blue;
+    width: 100%;
+    text-align:center;
+    // margin: 0 5px 0 5px;
+    grid-area: link;
+    text-decoration: none;
+}
+
+.contact_link:hover {
+    text-decoration: underline;
+}
+
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: $secondary-color;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#topBtn:hover {
+    background-color: $primary-color;
+}
+
+
+//RESPONSIVENESS
 
 @media screen and (max-width: 781px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        // font-family: 'Roboto', sans-serif;
+    }
+
     body {
         flex-direction: column;
     }
 
     .nav {
         width: 100vw;
-        height: 25vh;
+        height: 100vh;
+        position: relative;
+    }
+
+    .nav__link:hover {
+        border-top: 0.5px solid $text-color;
+        border-bottom: 0.5px solid $text-color;
+        cursor: url(assets/images/rocket_icon.png)15, 15, pointer;
+        // padding-left: 10px;
     }
 
     main {
@@ -137,21 +526,35 @@ section {
     section {
         margin: 0;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
     }
 }
 
 @media screen and (max-width: 500px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        // font-family: 'Roboto', sans-serif;
+    }
+    
     body {
         flex-direction: column;
     }
 
     .nav {
-    position: relative;
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
-    // height: 25vh;
+        position: relative;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        // height: 25vh;
+    }
+
+    .nav__link:hover {
+        border-top: 0.5px solid $text-color;
+        border-bottom: 0.5px solid $text-color;
+        cursor: url(assets/images/rocket_icon.png)15, 15, pointer;
+        // padding-left: 10px;
     }
 
     main {
@@ -163,126 +566,49 @@ section {
     section {
         margin: 0;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
     }
 
+    .portfolio__container {
+        min-height: 100vh;
+        width: 100vw;
+        // display: none;
+    }
+
+    .contact_part {
+        // background-color: cornflowerblue;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 50px;
+        grid-template-areas:
+        "icon link";
+        gap: 10px;
+        padding: 5px;
+        margin: 10px;
+        max-width: 100vw;
+    }
+    
+    // .contact_icon {
+    //     color: rgba(255, 255, 255, 0.8);
+    //     // font-size: 3rem;
+    //     background-color: green;
+    //     text-align: center;
+    //     grid-area: icon;
+    //     // margin: 0 5px 0 5px;
+    // }
+
+    .contact_link {
+        color: $primary-color;
+        font-size: 1rem;
+        // background-color:blue;
+        max-width: 100vw;
+        text-align:left;
+        margin: 0 0px 0 0px;
+        grid-area: link;
+    }
+
+    .column {
+        flex: 1
+    }
 
 }
-
-
-//WORKS
-
-// .nav {
-//     background-color: $primary-color;
-//     color: $text-color;
-//     width: 17%;
-//     left: 0;
-//     max-height: 100vh;
-//     min-height: 100vh;
-//     position: fixed;
-
-
-//     h2 {
-//         margin-top: 20px;
-//     }
-//     h2, h4 {
-//         margin-left: 40px;
-//         margin-bottom: 10px;
-//     }
-
-//     ul {
-//         list-style-type: none;
-//     }
-
-//     li {
-//         padding: 40px 0 40px 0;
-//     }
-
-// }
-
-// .nav__link {
-//     color: $text-color;
-//     text-decoration: none;
-//     margin: 20px;
-//     padding: 20px;
-// }
-
-// .nav__socialLink {
-//     color: $text-color;
-//     font-size:48px;
-//     padding: 20px;
-// }
-
-// .nav__socialsLinks li{
-//     display: inline-flex;
-//     justify-content: center;
-//     align-items: center;
-
-// }
-
-// .verticalLine {
-//     border-left: 3px solid $text-color;
-//     max-height: 100vh;
-//     min-height: 100vh;    
-//     position: fixed;
-//     left: 17%;
-//     // margin-left: -3px;
-//     top: 0;
-// }
-
-// // .image {
-// //     width: 85%;
-// //     height: 100%;
-// //     // max-height: 100vh;
-// //     min-height: 100vh;
-// // }
-
-// .image {
-//     display: grid;
-//     height: 100vh;
-//     // position: relative;
-//     // text-align: center;
-//     // color: white;
-// }
-
-// .image__file {
-//     width: 100%;
-//     max-width: 100%;
-//     max-height: 100vh;
-//     margin: auto;
-// }
-
-// // .image__text {
-// //     color: $text-color;
-// //     position: absolute;
-// //     top: 20px;
-// //     left: 20%;
-// // }
-
-// .image__text {
-//     color: $text-color;
-//     position: absolute;
-//     top: 50%;
-//     left: 58.5%;
-//     transform: translate(-50%, -50%);
-//     font-size: 50px;
-// }
-
-// .page_header {
-//     color: $primary-color;
-//     background-color: $secondary-color;
-//     padding: 10px 0 10px 275px;
-//     font-size: 40px;
-//     font-style: normal;
-//     font-weight:320;
-// }
-
-
-
-// .home {
-//     color: $primary-color;
-// }
-
-// section {
-//     min-height: 100vh;
-// }

@@ -6,58 +6,507 @@
     <meta property="og:title" content="Jerome Kithinji | Junior Software Developer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="assets/javascript/main.js"></script> -->
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <script src="https://kit.fontawesome.com/b3ff851399.js" crossorigin="anonymous"></script>
     <title>Jerome Kithinji</title>
 </head>
 <body>
     <nav class="nav">
         <div class="nav__header">
-            <h2 class="nav__title">Jerome Kithinji</h2>
-            <h4 class="nav__subheader">Junior Software Developer</h4>
+            <h2 class="nav__title"><a href="#landing__section">Jerome Kithinji</a></h2>
+            <h4 class="nav__subheader">Software Developer</h4>
         </div>
-        <!-- <h2 class="nav__header">Jerome Kithinji</h2>
-        <h4 class="nav__subheader">Junior Software Developer</h4> -->
-        <!-- <hr size=3> -->
         <ul>
-            <li><a class="nav__link" href="#home">About Me</a></li>
-            <li><a class="nav__link" href="#news">Portfolio</a></li>
-            <li><a class="nav__link" href="#contact">Skills</a></li>
-            <li><a class="nav__link" href="#about">Contact</a></li>
-            <li><a class="nav__link" href="#about">Resume</a></li>
+            <li><a class="nav__link" href="#about__section"><i class="nav__icon fas fa-user-astronaut"></i>About Me</a></li>
+            <li><a class="nav__link" href="#portfolio__section"><span class="iconif iconify-inline" data-icon="dashicons:portfolio" data-width="30" data-height="30"></span>
+                Portfolio</a></li>
+            <li><a class="nav__link" href="#skills__section"><i class=" nav__icon far fa-chart-bar"></i>Skills</a></li>
+            <li><a class="nav__link" href="#contact__section"><i class="nav__icon fas fa-envelope"></i>Contact</a></li>
+            <li><a class="nav__link" href="assets/pdf/Jerome Kithinji CV.pdf" target="_blank"><i class=" nav__icon fas fa-file-alt"></i>Resume</a></li>
         </ul>
-        <div class=nav__socials>
+        <!-- <div class=nav__socials>
             <ul class=nav__socialsLinks>
-                <li><a class="nav__socialLink" href="#home"><i class="fab fa-github-square"></i></a></li>
-                <li><a class="nav__socialLink" href="#/"><i class="fa fa-linkedin"></i></a></li>
+                <li><a class="nav__socialLink" href="#home"><i class="fab fa-linkedin"></i></a></li>
+                <li><a class="nav__socialLink" href="#/"><i class="fab fa-github-square"></i></i></a></li>
             </ul>
-        </div>
+        </div> -->
     </nav>
     <main class="main">
-        <!-- <div class="verticalLine"></div> -->
-        <section class="landing__section">
+        <section class="landing__section" id="landing__section">
             <div class="image">
                 <img class="image__file" src="assets/images/home_picture.jpg" alt="Landscape picture of the alps">
-                <div class="image__text">Welcome.</div>
+                <div class="image__text"><p>Welcome.</p></div>
             </div>
         </section>
-        <section class="about__section">
-            <h1 class="page_header">ABOUT ME</h1>
+
+        <section class="about__section" id="about__section">
+            <h1 class="page__header">ABOUT ME</h1>
+            <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec felis congue, fermentum elit et, molestie urna. Pellentesque non ante erat. Phasellus odio sem, finibus ut pulvinar quis, iaculis ac nisl. Fusce ex ante, accumsan sed eros ac, iaculis rutrum odio. In varius facilisis euismod. Ut tristique mattis auctor. Curabitur dapibus molestie sagittis.</p>
         </section>
+        
+        <section class="portfolio__section" id="portfolio__section">
+            <h1 class="page__header">PORTFOLIO</h1>
+            <div class="portfolio__container">
+                <!-- CARD 1 -->
+                <div class="portfolio__card">
+                    <input type="checkbox" id="card1" class="details" aria-hidden="true">
+                    <div class="card__content">
+                        <div class="card__front">
+                            <div class="card__inner">
+                                <h2>Real-estate Website</h2>
+                                <div class="tech_Stack">
+                                    <i class="fab fa-css3"></i>                            
+                                    <i class="fab fa-html5"></i>                           
+                                </div>
+                                <label for="card1" class="button" aria-hidden="true">
+                                    Details
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="card__inner">
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                        ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                        tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p><br>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                </div>
+                                <label for="card1" class="button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD 2 -->
+                <div class="portfolio__card">
+                    <input type="checkbox" id="card2" class="details" aria-hidden="true">
+                    <div class="card__content">
+                        <div class="card__front">
+                            <div class="card__inner">
+                                <h2>Real-estate Website</h2>
+                                <div class="tech_Stack">
+                                    <i class="fab fa-css3"></i>                            
+                                    <i class="fab fa-html5"></i>                           
+                                </div>
+                                <label for="card2" class="button" aria-hidden="true">
+                                    Details
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="card__inner">
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                        ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                        tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                </div>
+                                <label for="card2" class="button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD 3 -->
+                <div class="portfolio__card">
+                    <input type="checkbox" id="card3" class="details" aria-hidden="true">
+                    <div class="card__content">
+                        <div class="card__front">
+                            <div class="card__inner">
+                                <h2>Real-estate Website</h2>
+                                <div class="tech_Stack">
+                                    <i class="fab fa-css3"></i>                            
+                                    <i class="fab fa-html5"></i>                           
+                                </div>
+                                <label for="card3" class="button" aria-hidden="true">
+                                    Details
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="card__inner">
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                        ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                        tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                </div>
+                                <label for="card3" class="button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD 4 -->
+                <div class="portfolio__card">
+                    <input type="checkbox" id="card4" class="details" aria-hidden="true">
+                    <div class="card__content">
+                        <div class="card__front">
+                            <div class="card__inner">
+                                <h2>Real-estate Website</h2>
+                                <div class="tech_Stack">
+                                    <i class="fab fa-css3"></i>                            
+                                    <i class="fab fa-html5"></i>                           
+                                </div>
+                                <label for="card4" class="button" aria-hidden="true">
+                                    Details
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="card__inner">
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                        ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                        tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                </div>
+                                <label for="card4" class="button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD 5 -->
+                <div class="portfolio__card">
+                    <input type="checkbox" id="card5" class="details" aria-hidden="true">
+                    <div class="card__content">
+                        <div class="card__front">
+                            <div class="card__inner">
+                                <h2>Real-estate Website</h2>
+                                <div class="tech_Stack">
+                                    <i class="fab fa-css3"></i>                            
+                                    <i class="fab fa-html5"></i>                           
+                                </div>
+                                <label for="card5" class="button" aria-hidden="true">
+                                    Details
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="card__inner">
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                        ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                        tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                </div>
+                                <label for="card5" class="button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD 6 -->
+                <div class="portfolio__card">
+                    <input type="checkbox" id="card6" class="details" aria-hidden="true">
+                    <div class="card__content">
+                        <div class="card__front">
+                            <div class="card__inner">
+                                <h2>Real-estate Website</h2>
+                                <div class="tech_Stack">
+                                    <i class="fab fa-css3"></i>                            
+                                    <i class="fab fa-html5"></i>                           
+                                </div>
+                                <label for="card6" class="button" aria-hidden="true">
+                                    Details
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="card__inner">
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                        ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                        tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                </div>
+                                <label for="card6" class="button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD 7 -->
+                <div class="portfolio__card">
+                    <input type="checkbox" id="card7" class="details" aria-hidden="true">
+                    <div class="card__content">
+                        <div class="card__front">
+                            <div class="card__inner">
+                                <h2>Real-estate Website</h2>
+                                <div class="tech_Stack">
+                                    <i class="fab fa-css3"></i>                            
+                                    <i class="fab fa-html5"></i>                           
+                                </div>
+                                <label for="card7" class="button" aria-hidden="true">
+                                    Details
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="card__inner">
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                        ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                        tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                </div>
+                                <label for="card7" class="button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CARD 8 -->
+                <div class="portfolio__card">
+                    <input type="checkbox" id="card8" class="details" aria-hidden="true">
+                    <div class="card__content">
+                        <div class="card__front">
+                            <div class="card__inner">
+                                <h2>Real-estate Website</h2>
+                                <div class="tech_Stack">
+                                    <i class="fab fa-css3"></i>                            
+                                    <i class="fab fa-html5"></i>                           
+                                </div>
+                                <label for="card8" class="button" aria-hidden="true">
+                                    Details
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="card__inner">
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Link">
+                                    <div class="icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                </div>
+                                <div class="project_Description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates earum nostrum ipsam
+                                        ullam, reiciendis nam consectetur? Doloribus voluptate architecto possimus perferendis
+                                        tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, accusamus.</p>
+                                </div>
+                                <label for="card8" class="button return" aria-hidden="true">
+                                    <i class="fas fa-arrow-left"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills__section" id="skills__section">
+            <h1 class="page__header">skills</h1>
+            <h2 class="skills__header">tech stack</h2>
+            <div class="skills__container">
+                <div class="row">
+                    <div class="column">
+                        <div class="tech_stack_icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="tech_stack_icon">
+                            <i class="fab fa-css3"></i>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="tech_stack_icon">
+                            <i class="fab fa-react"></i>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="row 2">
+                    <div class="column">
+                        <div class="tech_stack_icon">
+                            <i class="fab fa-js-square"></i>                       
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="tech_stack_icon">
+                            <i class="fab fa-node"></i>                        
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="tech_stack_icon">
+                            <i class="fab fa-sass"></i>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="row 3">
+                    <div class="column">
+                        <div class="tech_stack_icon">
+                            <i class="fab fa-github"></i>                        
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="tech_stack_icon">
+                            <i class="fab fa-git"></i>                        
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="tech_stack_icon">
+                            <i class="fab fa-npm"></i>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <h2 class="skills__header">my skills</h2>
+            <div class="skills__container">
+
+            </div> -->
+        </section>
+
+        <section class="contact__section" id="contact__section">
+            <h1 class="page__header">contact</h1>
+            <div class="contact__container">
+                <div class="row">
+                    <div class="column">
+                        <div class="contact_part">
+                            <a href="https://github.com/jeromekithinji" target="_blank"><i class="contact_icon fab fa-github-square"></i></a>
+                            <a class="contact_link" href="https://github.com/jeromekithinji" target="_blank"><p class="contact_link">https://github.com/jeromekithinji</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row 2">
+                    <div class="column">
+                        <div class="contact_part">
+                            <a href="https://www.linkedin.com/in/jeromekithinji/" target="_blank"><i class="contact_icon fab fa-linkedin"></i></a>
+                            <a class="contact_link" href="https://www.linkedin.com/in/jeromekithinji/" target="_blank"><p class="contact_link">https://www.linkedin.com/in/jeromekithinji/</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row 3">
+                    <div class="column">
+                        <div class="contact_part">
+                            <a href = "mailto: kithinjijerome@gmail.com" target="_blank"><i class=" contact_icon fas fa-envelope"></i></a>
+                            <a class="contact_link" href = "mailto: kithinjijerome@gmail.com" target="_blank"><p class="contact_link"> kithinjijerome@gmail.com</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <button onclick="topFunction()" id="topBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("topBtn");
+            
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+                } 
+                else {
+                mybutton.style.display = "none";
+                }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            </script>
     </main>
 
-    <!-- <section class="portfolio__section">
-        
-    </section>
-
-    <section class="skills__section">
-        
-    </section>
-
-    <section class="contact__section">
-        
-    </section> -->
     
 </body>
 </html>
