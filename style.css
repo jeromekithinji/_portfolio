@@ -294,6 +294,22 @@ section {
   box-shadow: none;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #008dec;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #005086;
+}
+
 .skills__header {
   color: #005086;
   text-transform: uppercase;
