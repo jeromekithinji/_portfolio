@@ -88,14 +88,6 @@ body {
     // align-items: center;
 }
 
-// .verticalLine {
-//     border-left: 2px solid $text-color;
-//     margin-left: 20%;
-//     height: 100vh;
-//     position: fixed;
-//     top: 0;
-// }
-
 // SECTIONS
 
 section {
@@ -167,20 +159,6 @@ section {
 }
 
 // PORTFOLIO
-
-// .portfolio__container {
-//     background-color: cornflowerblue;
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     grid-template-rows: repeat(3, 100px);
-//     grid-template-areas:
-//     "card card"
-//     "card card"
-//     "card card";
-//     gap: 10px;
-//     padding: 10px;
-//     margin: 10px;
-// }
 
 .portfolio__container {
 	display: flex;
@@ -514,6 +492,13 @@ section {
         position: relative;
     }
 
+    .nav__link:hover {
+        border-top: 0.5px solid $text-color;
+        border-bottom: 0.5px solid $text-color;
+        cursor: url(assets/images/rocket_icon.png)15, 15, pointer;
+        // padding-left: 10px;
+    }
+
     main {
         width: 100vw;
         height: 50vh;
@@ -544,6 +529,13 @@ section {
         width: 100vw;
         height: 100vh;
         // height: 25vh;
+    }
+
+    .nav__link:hover {
+        border-top: 0.5px solid $text-color;
+        border-bottom: 0.5px solid $text-color;
+        cursor: url(assets/images/rocket_icon.png)15, 15, pointer;
+        // padding-left: 10px;
     }
 
     main {

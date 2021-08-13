@@ -399,6 +399,12 @@ section {
     position: relative;
   }
 
+  .nav__link:hover {
+    border-top: 0.5px solid #F2F5F7;
+    border-bottom: 0.5px solid #F2F5F7;
+    cursor: url(assets/images/rocket_icon.png) 15, 15, pointer;
+  }
+
   main {
     width: 100vw;
     height: 50vh;
@@ -426,6 +432,12 @@ section {
     text-align: center;
     width: 100vw;
     height: 100vh;
+  }
+
+  .nav__link:hover {
+    border-top: 0.5px solid #F2F5F7;
+    border-bottom: 0.5px solid #F2F5F7;
+    cursor: url(assets/images/rocket_icon.png) 15, 15, pointer;
   }
 
   main {
