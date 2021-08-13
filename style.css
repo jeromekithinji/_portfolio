@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 * {
   margin: 0;
   padding: 0;
@@ -105,15 +106,36 @@ section {
   color: #F2F5F7;
 }
 
-.image__text {
+.image__text p {
   color: #F2F5F7;
   position: absolute;
   top: 50%;
-  left: 58.5%;
+  left: 50.5%;
   transform: translate(-50%, -50%);
   font-size: 50px;
 }
 
+/* Animation */
+.image__text p {
+  animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
 .about__text {
   margin: 0 15px 0 15px;
   padding-left: 15px;
@@ -364,7 +386,7 @@ section {
   font-size: 4rem;
   text-align: center;
   grid-area: icon;
-  margin-right: 40px;
+  margin-right: 50px;
 }
 
 .contact_link {

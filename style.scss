@@ -1,4 +1,5 @@
 @import 'assets/styles/_variables';
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 * {
     margin: 0;
@@ -131,13 +132,28 @@ section {
     color: $text-color;
 }
 
-.image__text {
+.image__text p{
     color: $text-color;
     position: absolute;
     top: 50%;
-    left: 58.5%;
+    left: 50.5%;
     transform: translate(-50%, -50%);
     font-size: 50px;
+}
+
+/* Animation */
+.image__text p{
+    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 24em;}
+}
+
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
 }
 
 // ABOUT ME PAGE
@@ -458,7 +474,7 @@ section {
     // background-color: green;
     text-align: center;
     grid-area: icon;
-    margin-right: 40px;
+    margin-right: 50px;
     // margin: 0 5px 0 5px;
 }
 
