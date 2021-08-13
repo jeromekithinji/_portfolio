@@ -28,7 +28,7 @@ body {
   list-style-type: none;
 }
 .nav li {
-  padding: 40px 0 40px 0;
+  margin: 40px 0 40px 0;
 }
 
 .nav__title a {
@@ -37,8 +37,20 @@ body {
 }
 
 .nav__header {
-  padding-bottom: 10px;
+  padding-bottom: 4px;
   border-bottom: 3px solid #F2F5F7;
+  margin-bottom: 30px;
+}
+
+.nav__icon {
+  font-size: 30px;
+  padding-right: 15px;
+}
+
+.nav__link:hover {
+  border-top: 0.5px solid #F2F5F7;
+  border-bottom: 0.5px solid #F2F5F7;
+  cursor: url(assets/images/rocket_icon.png) 15, 15, pointer;
 }
 
 .nav__link {
@@ -46,11 +58,12 @@ body {
   text-decoration: none;
   margin: 20px;
   padding: 20px;
+  font-size: medium;
 }
 
 .nav__socialLink {
   color: #F2F5F7;
-  font-size: 48px;
+  font-size: 30px;
   padding: 20px;
 }
 

@@ -37,7 +37,8 @@ body {
     }
 
     li {
-        padding: 40px 0 40px 0;
+        // padding: 40px 0 40px 0;
+        margin: 40px 0 40px 0;
     }
         
 }
@@ -48,8 +49,21 @@ body {
 }
 
 .nav__header {
-    padding-bottom: 10px;
+    padding-bottom: 4px;
     border-bottom: 3px solid $text-color;
+    margin-bottom: 30px;
+}
+
+.nav__icon {
+    font-size: 30px;
+    padding-right: 15px;
+}
+
+.nav__link:hover {
+    border-top: 0.5px solid $text-color;
+    border-bottom: 0.5px solid $text-color;
+    cursor: url(assets/images/rocket_icon.png)15, 15, pointer;
+    // padding-left: 10px;
 }
 
 .nav__link {
@@ -57,11 +71,12 @@ body {
     text-decoration: none;
     margin: 20px;
     padding: 20px;
+    font-size: medium;
 }
 
 .nav__socialLink {
     color: $text-color;
-    font-size:48px;
+    font-size: 30px;
     padding: 20px;
 }
 
