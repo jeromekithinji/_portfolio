@@ -382,6 +382,26 @@ section {
   text-decoration: underline;
 }
 
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #AFC1D0;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#topBtn:hover {
+  background-color: #005086;
+}
+
 @media screen and (max-width: 781px) {
   * {
     margin: 0;
