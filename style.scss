@@ -436,13 +436,18 @@ section {
 .contact_part {
     // background-color: #F7FDFF;
     display: grid;
-    grid-template-columns: repeat(2, 1fr 4fr);
+    grid-template-columns: repeat(2, 1fr 4.5fr);
     grid-template-rows: repeat(1, 50px);
     grid-template-areas:
     "icon link";
     // gap: 10px;
     padding: 5px;
     margin: 10px;
+
+    // fixes the alignment of the contact links
+    a {
+        width: 10px;
+    }
 }
 
 .contact_icon {
@@ -451,7 +456,7 @@ section {
     // background-color: green;
     text-align: center;
     grid-area: icon;
-    margin-right: 50px;
+    margin-right: 10px;
     // margin: 0 5px 0 5px;
 }
 
@@ -460,10 +465,13 @@ section {
     font-size: 2rem;
     // background-color:blue;
     width: 100%;
-    text-align:center;
+    text-align: left;
     // margin: 0 5px 0 5px;
     grid-area: link;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 5.7vh;
 }
 
 .contact_link:hover {

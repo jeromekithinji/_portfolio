@@ -369,11 +369,14 @@ section {
 
 .contact_part {
   display: grid;
-  grid-template-columns: repeat(2, 1fr 4fr);
+  grid-template-columns: repeat(2, 1fr 4.5fr);
   grid-template-rows: repeat(1, 50px);
   grid-template-areas: "icon link";
   padding: 5px;
   margin: 10px;
+}
+.contact_part a {
+  width: 10px;
 }
 
 .contact_icon {
@@ -381,16 +384,19 @@ section {
   font-size: 4rem;
   text-align: center;
   grid-area: icon;
-  margin-right: 50px;
+  margin-right: 10px;
 }
 
 .contact_link {
   color: #005086;
   font-size: 2rem;
   width: 100%;
-  text-align: center;
+  text-align: left;
   grid-area: link;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 5.7vh;
 }
 
 .contact_link:hover {
