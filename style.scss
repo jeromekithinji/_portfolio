@@ -127,6 +127,7 @@ section {
     min-height: 60vh;
 }
 
+
 .page__header {
     color: $primary-color;
     background-color: $secondary-color;
@@ -193,11 +194,16 @@ section {
 }
 
 // PORTFOLIO
+
+.portfolio__section {
+    min-width: auto;
+}
+
 .portfolio__container {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-    min-height: 100vh;
+    min-height: auto;
 }
 
 
@@ -245,6 +251,7 @@ section {
     background-position-x: 2400.5rem;
 	background-color: #fff;
 	background-size: cover;
+    
 	// background-position: center;
 	&:after {
 		content: '';
@@ -256,30 +263,37 @@ section {
 		display: block;
 		border-radius: 6px;
 		backface-visibility: hidden;
-		background: linear-gradient(
-			40deg,
-			$primary-color,
-			rgba(255, 242, 166, 0.7)
-		);
+		// background: linear-gradient(
+		// 	40deg,
+		// 	$primary-color,
+		// 	rgba(255, 242, 166, 0.856)
+		// );
+        // background: $primary-color;
+
 	}
 
 	.card__inner {
 		grid-template-rows: 5fr 1fr 1fr 2fr 1fr;
 		justify-items: center;
+
+        .background-image {
+            object-fit: cover;
+        }
 	}
 
 	h2 {
-		grid-row: 2;
+		grid-row: 4;
 		margin-bottom: 0.3rem;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 		color: #fff;
+        // color: $primary-color;
 		font-weight: 500;
 		text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 	}
 
 	.tech_Stack {
-		grid-row: 3;
+		grid-row: 5;
 		color: rgba(255, 255, 255, 0.8);
 		font-size: 2.5rem;
 		display: flex;
@@ -289,6 +303,8 @@ section {
 		}
 	}
 }
+
+
 
 .card__back {
 	transform: rotateY(180deg);
@@ -404,9 +420,12 @@ section {
     font-size: 30px;
     font-weight: 400;
 }
+
+.skills__section {
+    min-height: auto;
+}
 .skills__section h2 {
     text-decoration: underline;
-
 }
 
 .skills__container {
@@ -437,6 +456,10 @@ section {
 }
 
 // Contact section
+
+.contact__section {
+    min-height: auto;
+}
 
 .contact__container {
     margin: 15px;
