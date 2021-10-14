@@ -374,6 +374,10 @@ section {
   text-decoration: underline;
 }
 
+.skills__label {
+  font-size: 25px;
+}
+
 .skills__container {
   margin: 15px;
   padding: 0 5px 0 5px;
