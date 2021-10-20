@@ -6,29 +6,38 @@
     box-sizing: border-box;
     // font-family: 'Roboto', sans-serif;
 }
-
-.image__text p {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; 
-    animation: 
-        typing 20s steps(40, end),
-        blink-caret .75s step-end infinite;
+.containerTypewriter {
+    // padding-top: 200px;
 }
 
-  /* The typing effect */
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
+.typed-out {
+    color: $text-color;
+	overflow: hidden;
+	font-size: 5rem;
+	border-right: 0.15em solid $text-color;
+    letter-spacing: .1em; 
+	white-space: nowrap;
+	animation: typing 2s steps(30, end) forwards, blink 0.75s infinite;
+	width: 0;
 }
 
-  /* The typewriter cursor effect */
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: orange; }
-    }
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes blink {
+	from {
+		border-color: transparent;
+	}
+	to {
+		border-color: $text-color;
+	}
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -123,9 +132,21 @@ section {
     min-height: 100vh;
 }
 
+.landing__section {
+    background-image: url('assets/images/home_picture.jpg');
+    background-size: cover; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content:space-around;
+
+}
+
 .about__section {
     min-height: 60vh;
 }
+
 
 .page__header {
     color: $primary-color;
@@ -188,16 +209,21 @@ section {
     margin: 0 15px 0 15px;
     padding-left: 15px;
     font-size: 25px;
-    font-weight:320;
+    font-weight: 320;
     border-left: 4px solid $primary-color;
 }
 
 // PORTFOLIO
+
+.portfolio__section {
+    min-width: auto;
+}
+
 .portfolio__container {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-    min-height: 100vh;
+    min-height: auto;
 }
 
 
@@ -213,6 +239,11 @@ section {
 		transform-style: preserve-3d;
 		transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
 	}
+
+    &:hover {
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,0.09);
+        transform: scale3d(1.008, 1.008, 1);
+    }
 }
 
 .details {
@@ -245,6 +276,7 @@ section {
     background-position-x: 2400.5rem;
 	background-color: #fff;
 	background-size: cover;
+    
 	// background-position: center;
 	&:after {
 		content: '';
@@ -256,30 +288,37 @@ section {
 		display: block;
 		border-radius: 6px;
 		backface-visibility: hidden;
-		background: linear-gradient(
-			40deg,
-			$primary-color,
-			rgba(255, 242, 166, 0.7)
-		);
+		// background: linear-gradient(
+		// 	40deg,
+		// 	$primary-color,
+		// 	rgba(255, 242, 166, 0.856)
+		// );
+        // background: $primary-color;
+
 	}
 
 	.card__inner {
 		grid-template-rows: 5fr 1fr 1fr 2fr 1fr;
 		justify-items: center;
+
+        .background-image {
+            object-fit: cover;
+        }
 	}
 
 	h2 {
-		grid-row: 2;
+		grid-row: 4;
 		margin-bottom: 0.3rem;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 		color: #fff;
+        // color: $primary-color;
 		font-weight: 500;
 		text-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 	}
 
 	.tech_Stack {
-		grid-row: 3;
+		grid-row: 5;
 		color: rgba(255, 255, 255, 0.8);
 		font-size: 2.5rem;
 		display: flex;
@@ -289,6 +328,8 @@ section {
 		}
 	}
 }
+
+
 
 .card__back {
 	transform: rotateY(180deg);
@@ -404,9 +445,16 @@ section {
     font-size: 30px;
     font-weight: 400;
 }
+
+.skills__section {
+    min-height: auto;
+}
 .skills__section h2 {
     text-decoration: underline;
+}
 
+.skills__label {
+    font-size: 25px;
 }
 
 .skills__container {
@@ -437,6 +485,10 @@ section {
 }
 
 // Contact section
+
+.contact__section {
+    min-height: auto;
+}
 
 .contact__container {
     margin: 15px;
@@ -622,3 +674,131 @@ section {
     }
 
 }
+
+.starsContainer {
+    margin-bottom: 40px;
+    top: 5000px;
+}
+// Shooting Star animation
+$shooting-time: 3000ms;
+
+.night {
+    // margin-bottom: 100px;   
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(45deg);
+    display: flex;
+    flex-wrap:nowrap;
+    //   height: 400px;
+    align-content:space-around;
+    // animation: sky 200000ms linear infinite;
+}
+
+.shooting_star {
+  position: absolute;
+  left: 50%;
+  top: 150%;
+  // width: 100px;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(95, 145, 255, 1), rgba(0, 0, 255, 0));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
+  animation:
+    tail $shooting-time ease-in-out infinite,
+    shooting $shooting-time ease-in-out infinite;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    // width: 30px;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgba(95, 145, 255, 1), rgba(0, 0, 255, 0));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    animation: shining $shooting-time ease-in-out infinite;
+  }
+
+  &::after {
+    // CodePen Error
+    // @extend .shooting_star::before;
+    
+    content: '';
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    // width: 30px;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), rgba(95, 145, 255, 1), rgba(0, 0, 255, 0));
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    animation: shining $shooting-time ease-in-out infinite;
+    transform: translateX(50%) rotateZ(-45deg);
+  }
+  
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      $delay: random(9999) + 0ms;
+      top: calc(50% - #{random(400) - 200px});
+      left: calc(50% - #{random(300) + 0px});
+      animation-delay: $delay;
+      // opacity: random(50) / 100 + 0.5;
+      
+      &::before,
+      &::after {
+        animation-delay: $delay;
+      }
+    }
+  }
+}
+
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+  
+  30% {
+    width: 100px;
+  }
+  
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shining {
+  0% {
+    width: 0;
+  }
+  
+  50% {
+    width: 30px;
+  }
+  
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+  
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes sky {
+  0% {
+    transform: rotate(45deg);
+  }
+  
+  100% {
+    transform: rotate(45 + 360deg);
+  }
+}
+
